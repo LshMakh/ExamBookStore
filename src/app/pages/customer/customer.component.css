@@ -1,0 +1,247 @@
+body {
+  background-color: #F5F7FA;
+  margin: 0;
+  padding: 0;
+  
+}
+
+nav {
+  
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.nav-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  
+}
+
+.nav-header-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-header-btn h1 {
+  color: #B7D4FF;
+  margin: 0;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.customer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.customer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1A365D;
+}
+
+.cart-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+}
+
+.customer-input {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.cart-section-wrapper {
+  display: flex;
+  align-items: flex-end; 
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.customer-name {
+  margin-bottom: 0.5rem;
+  color: #2869CA;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+:host ::ng-deep .p-inputtext {
+  padding: 0.75rem 1rem;
+  border: 1px solid #E2E8F0;
+  border-radius: 0.5rem;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+:host ::ng-deep .p-inputtext:focus {
+  border-color: #2869CA;
+  box-shadow: 0 0 0 2px rgba(40, 105, 202, 0.2);
+}
+
+.go-to-cart-btn {
+  background-color: #2869CA;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+
+
+.go-to-cart-btn:hover {
+  background-color: #1e4b8f;
+  transform: translateY(-1px);
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 120px;
+  padding: 1rem 0;
+}
+
+.book-card {
+  width: 400px;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid #E2E8F0;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  
+  align-items: center;
+
+  gap: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+
+.book-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.book-image i {
+  font-size: 3.5rem;
+  color: #2869CA;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.book-title, .book-author, .book-quantity, .book-price {
+  font-size: 0.875rem;
+  color: #4A5568;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-title span:first-child,
+.book-author span:first-child,
+.book-quantity span:first-child,
+.book-price span:first-child {
+  font-weight: 500;
+  color: #2D3748;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.quantity-display {
+  min-width: 150px;
+  text-align: center;
+  font-weight: 600;
+  color: #2D3748;
+}
+
+:host ::ng-deep .p-button {
+  border-radius: 0.5rem;
+}
+
+:host ::ng-deep .p-button.p-button-rounded {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+:host ::ng-deep .add-to-cart-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #2869CA;
+  border: none;
+  color: white;
+  font-size: 1rem; 
+  font-weight: 600;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+:host ::ng-deep .add-to-cart-btn:hover {
+  background-color: #1e4b8f; 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+:host ::ng-deep .add-to-cart-btn:disabled {
+  background-color: #B7D4FF; 
+  color: #E2E8F0; 
+  cursor: not-allowed;
+  box-shadow: none; 
+  transform: none; 
+}
+
+:host ::ng-deep .p-inputtext {
+  width: 100%;
+  background-color: #DBE7FA;
+  border: 1px solid #B7D4FF;
+}
+
+:host ::ng-deep .p-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+:host ::ng-deep .p-toast {
+  opacity: 0.95;
+}

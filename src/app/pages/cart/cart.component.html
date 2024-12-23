@@ -1,0 +1,77 @@
+<div class="cart-page">
+  <nav class="cart-nav">
+    <div class="nav-container">
+      <div class="nav-content">
+        <h1 class="brand">მაღაზია</h1>
+        <h1 class="page-title">ჩემი კალათა</h1>
+      </div>
+    </div>
+  </nav>
+
+  <div class="cart-container">
+    <div class="cart-content" *ngIf="cartItems.length > 0">
+      <p-table [value]="cartItems" [tableStyle]="{'min-width': '60rem'}" styleClass="custom-table">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>დასახელება</th>
+            <th>ავტორი</th>
+            <th>რაოდენობა</th>
+            <th>ფასი</th>
+    
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-item>
+          <tr>
+            <td>{{item.title}}</td>
+            <td>{{item.author}}</td>
+            <td>
+              <div class="quantity-controls">
+                <button pButton type="button" icon="pi pi-minus" 
+                        (click)="decrementQuantity(item)"
+                        [disabled]="item.selectedQuantity <= 1"
+                        class="p-button-rounded p-button-text"></button>
+                <span class="quantity-display">{{item.selectedQuantity}}</span>
+                <button pButton type="button" icon="pi pi-plus" 
+                        (click)="incrementQuantity(item)"
+                        [disabled]="item.selectedQuantity >= item.quantity"
+                        class="p-button-rounded p-button-text"></button>
+              </div>
+            </td>
+            <td>{{item.price}} ₾</td>
+         
+        
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="footer">
+        
+        </ng-template>
+      </p-table>
+
+      <div class="cart-footer">
+
+        <div class="total-cost">
+          <span>ჯამი: {{totalAmount}} ₾</span>
+        </div>
+     
+        <div class="action-buttons">
+          <button pButton type="button" label="გაუქმება" 
+                  class="p-button-outlined cancel-btn"
+                  (click)="cancelOrder()"></button>
+          <button pButton type="button" label="შეკვეთა" 
+                  class="p-button-primary confirm-btn"
+                  (click)="placeOrder()"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="empty-cart" *ngIf="cartItems.length === 0">
+      <i class="pi pi-shopping-cart"></i>
+      <p>თქვენი კალათა ცარიელია</p>
+      <button pButton type="button" label="მაღაზიაში დაბრუნება" 
+              class="p-button-primary return-btn"
+              routerLink="/customer"></button>
+    </div>
+  </div>
+
+  <p-toast></p-toast>
+</div>

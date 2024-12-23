@@ -1,0 +1,79 @@
+<nav>
+  <div class="nav-header">
+    <div class="nav-header-btn">
+      <h1>მაღაზია</h1>
+      <h1>მომხმარებელი</h1>
+    </div>
+  </div>
+</nav>
+
+<div class="customer-container">
+  <div class="customer-container">
+    <div class="customer-header">
+      <img src="src/assets/logo.png" alt="">
+      <div class="title">წიგნების ჩამონათვალი</div>
+      <div class="cart-section-wrapper">
+        <div class="customer-input">
+          <div class="customer-name">შეიყვანეთ თქვენი სახელი და გვარი</div>
+          <input style="height: 45px;"
+            type="text" 
+            pInputText 
+            [(ngModel)]="customerName" 
+            placeholder=""
+          >
+        </div>
+        <button 
+          pButton 
+          type="button"
+          icon="pi pi-shopping-cart" 
+          label="ჩემი კალათა/შეკვეთები"
+          (click)="goToCart()"
+          class="go-to-cart-btn"
+        ></button>
+      </div>
+    </div>
+  
+    <div class="books-grid">
+      <div class="book-card" *ngFor="let book of books">
+        <div class="book-image">
+          <i class="pi pi-book"></i>
+        </div>
+        <div class="book-details">
+          <div class="book-title">დასახელება: {{book.title}}</div>
+          <div class="book-author">ავტორი: {{book.author}}</div>
+          <div class="book-quantity">რაოდენობა: {{book.quantity}}</div>
+          <div class="book-price">ფასი: {{book.price}} ₾</div>
+          <div class="quantity-controls">
+            <button 
+              pButton 
+              type="button" 
+              icon="pi pi-minus" 
+              (click)="decrementQuantity(book.bookId)"
+              [disabled]="quantities[book.bookId] === 0"
+              class="p-button-rounded p-button-outlined"
+            ></button>
+            <span class="quantity-display">{{quantities[book.bookId]}}</span>
+            <button 
+              pButton 
+              type="button" 
+              icon="pi pi-plus" 
+              (click)="incrementQuantity(book.bookId)"
+              [disabled]="quantities[book.bookId] >= book.quantity"
+              class="p-button-rounded p-button-outlined"
+            ></button>
+          </div>
+          <button 
+            pButton 
+            type="button"
+            icon="pi pi-shopping-cart" 
+            label="კალათაში დამატება"
+            (click)="addToCart(book)"
+            [disabled]="isAddToCartDisabled(book.bookId)"
+            class="add-to-cart-btn"
+          ></button>
+        </div>
+      </div>
+    </div>
+  
+    <p-toast></p-toast>
+  </div>

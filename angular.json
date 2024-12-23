@@ -31,12 +31,19 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+              "src/favicon.ico",
+              "src/assets",
+            {
+              
+              "glob": "**/*",
+              "input": "public"
+            }
+          ],
             "styles": [
+              "https://cdn.jsdelivr.net/npm/primeng/resources/themes/saga-blue/theme.css",
+              "https://cdn.jsdelivr.net/npm/primeng/resources/primeng.min.css",
+              "https://cdn.jsdelivr.net/npm/primeicons/primeicons.css",
+              "https://cdn.jsdelivr.net/npm/primeflex/primeflex.css",
               "src/styles.css"
             ],
             "scripts": []

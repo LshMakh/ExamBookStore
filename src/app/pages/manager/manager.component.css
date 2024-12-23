@@ -1,0 +1,262 @@
+.manager-page {
+  min-height: 100vh;
+
+}
+
+.nav-header {
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand, .page-title {
+  color: #B7D4FF;
+  margin: 0;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-title img {
+  width: 24px;
+  height: 24px;
+}
+
+.header-title h2 {
+  margin: 0;
+  color: #1A365D;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+:host ::ng-deep .custom-table {
+  border: 1px solid #E2E8F0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+:host ::ng-deep .custom-table th {
+  background-color: #F8FAFC !important;
+  padding: 1rem !important;
+  font-weight: 600;
+  color: #2D3748;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+:host ::ng-deep .custom-table td {
+  padding: 1rem !important;
+  color: #4A5568;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+:host ::ng-deep .custom-table tr:hover {
+  background-color: #F7FAFC;
+  cursor: pointer;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #E2E8F0;
+  border-radius: 0.25rem;
+  background-color: white;
+}
+
+.add-book-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+:host ::ng-deep .add-book-btn {
+  background-color: #B7D4FF !important;
+  border: none !important;
+  color: #2869CA !important;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  gap: 5px;
+  border-radius: 0.5rem;
+}
+
+:host ::ng-deep .add-book-btn:hover {
+  background-color: #95beff !important;
+}
+
+.order-details {
+  padding: 1rem;
+  background-color: #F8FAFC;
+  border-radius: 0.5rem;
+}
+
+:host ::ng-deep .nested-table {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+:host ::ng-deep .p-button.p-button-success {
+  color: #48BB78;
+}
+
+:host ::ng-deep .cancel-btn {
+  border-color: #DC2626 !important;
+  color: white !important;
+  padding: 10px;
+  background-color: #FF6E6E;
+  border-radius: 10px;
+  width: 200px;
+}
+
+:host ::ng-deep .cancel-btn:hover {
+  background-color: #DC2626 !important;
+}
+
+:host ::ng-deep .confirm-btn:hover{
+  background-color: #1A365D !important;
+}
+
+:host ::ng-deep .confirm-btn {
+  background-color: #2869CA !important;
+  border-color: #2869CA !important;
+  color: white;
+  height: 40px;
+  
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+:host ::ng-deep .p-button.p-button-danger {
+  color: #F56565;
+}
+
+:host ::ng-deep .p-toast {
+  opacity: 0.95;
+}
+
+:host ::ng-deep .p-row-toggler {
+  width: 2rem;
+  height: 2rem;
+  color: #2D3748;
+}
+
+:host ::ng-deep .p-dialog .p-dialog-header {
+  padding: 1.5rem;
+}
+
+:host ::ng-deep .p-inputtext:focus {
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
+  border-color: #63B3ED !important;
+}
+
+:host ::ng-deep .p-inputnumber-button-up,
+:host ::ng-deep .p-inputnumber-button-down {
+  background-color: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #2D3748 !important;
+}
+
+:host ::ng-deep .p-sortable-column:hover {
+  background-color: #F7FAFC !important;
+}
+
+:host ::ng-deep .p-sortable-column.p-highlight {
+  background-color: #EDF2F7 !important;
+}
+
+:host ::ng-deep .p-row-toggler:hover {
+  background-color: #EDF2F7;
+  color: #2869CA;
+}dialog .p-dialog-header {
+  background-color: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+:host ::ng-deep .p-dialog .p-dialog-content {
+  padding: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field label {
+  color: #2D3748;
+  font-weight: 500;
+}
+
+:host ::ng-deep .p-inputtext,
+:host ::ng-deep .p-inputnumber-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 0.5rem;
+}
+
+:host ::ng-deep .p-inputgroup .p-button {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #2D3748;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #E2E8F0;
+}
+
+:host ::ng-deep .p-button.p-button-text {
+  color: #718096;
+}
+
